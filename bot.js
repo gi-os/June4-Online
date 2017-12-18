@@ -1,5 +1,4 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+
 
 var Discordie = require("discordie");
 var Events = Discordie.Events;
