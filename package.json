@@ -5,7 +5,7 @@
 "main": "june4.js",
 "scripts": {
 "start": "node june4.js"
-}
+},
 "dependencies": {
 "discord.js": "11.1.0",
 "request": "2,81.0"
