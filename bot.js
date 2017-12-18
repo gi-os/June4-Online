@@ -1,6 +1,6 @@
-
-
-
+var Discordie = require("discordie");
+var Events = Discordie.Events;
+var client = new Discordie();
 //version
 var version = "v1.4.25";
 //users name
