@@ -8,6 +8,6 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discordie.js",
+    "discordie.js"
   }
 }
