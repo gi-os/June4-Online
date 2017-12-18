@@ -1,4 +1,3 @@
-@@ -0,0 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
