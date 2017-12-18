@@ -1,8 +1,8 @@
-client.login(process.env.BOT_TOKEN);
+
 var Discordie = require("discordie");
 var Events = Discordie.Events;
 var client = new Discordie();
-
+client.login(process.env.BOT_TOKEN);
 //version
 var version = "v1.4.25";
 //users name
