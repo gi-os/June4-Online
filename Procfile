@@ -1,1 +1,1 @@
-worker : node june4.js
+worker : node bot.js
