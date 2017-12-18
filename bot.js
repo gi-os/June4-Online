@@ -375,4 +375,4 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
 	}
 });
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.Mjg2Mjg4MjE0OTI5NTcxODQw.C5eiPg.-Q2fmuIV_34LLCt87KeMFI8uraQ);
