@@ -8,7 +8,6 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discordie.js": "11.1.0",
-    "request": "2.81.0"
+    "discordie.js",
   }
 }
