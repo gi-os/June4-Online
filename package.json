@@ -5,6 +5,9 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
-  }
- 
+  },
+  "dependencies": {
+    "discordie": "^0.8.0",
+    "request": "2.81.0"
+
 }
