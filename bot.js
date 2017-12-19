@@ -1,4 +1,44 @@
-function commandsj4() {
+//Developed by Gi-OS
+
+
+var Discordie = require("discordie");
+var Events = Discordie.Events;
+var client = new Discordie({
+  autoReconnect: true,
+});
+
+//version
+var version = "v1.6.1.3"; //version of june
+var host = "Gi-OS Servers"
+//Other important things
+var test = "FALSE"; //Is this bot avaliable for public use?
+var number = randomIntFromInterval(1,100);// do not edit please
+var token = "Mjg2Mjg4MjE0OTI5NTcxODQw.C9bF8A.OiAO_N1Gm8KIBrOQtszwa9jBZfE"//Put your token here
+//users name
+var owner = "Giovanni Lupo"; //Your full name
+var ownerwake = "gio" //Your Nick Name Lowercase
+var ownernick = "Gio" //Your Nick Name Uppercase
+var ownerusername = "@Gi-OS" //Your User Name
+var ownerid = "279447694240382977" //Your ID
+//company
+var co = "Gi-OS" //your company name!
+//Bot's Name
+var wake = "june";//lowercase, wake word ("june" boot)
+var nick = "June"; //Nick name (Hi! I'm "June"!)
+var name = "June4";//Full name ("June4" Now powering on...)
+//other vars are somewhere else in the code (sorry! it only works there!)
+function randomIntFromInterval(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+
+client.connect({
+	token: token
+
+});
+getData().then(msg => message.channel.send(msg)).catch(err=>console.log(err))
+client.Dispatcher.on(Events.GATEWAY_READY, e => {
+
 	//terminal text
 	setTimeout(function(){
 	console.log("     ██ ██    ██ ███    ██ ███████ ██   ██ "),
@@ -6,7 +46,6 @@ function commandsj4() {
 	console.log("     ██ ██    ██ ██ ██  ██ █████   ███████ "),
 	console.log("██   ██ ██    ██ ██  ██ ██ ██           ██ "),
 	console.log(" █████   ██████  ██   ████ ███████      ██ ");
-
 	console.log("Booting, Please wait...");
 	setTimeout(function(){
 	console.log("════════════");
@@ -54,8 +93,7 @@ client.Users.get(ownerid).openDM().then(function(dm) {
 
 		fields: [{
 			name: "Good morning "+ownernick+", "+name+" is now online!",
-			value: "\n```     ██ ██    ██ ███    ██ ███████     \n     ██ ██    ██ ████   ██ ██ \n     ██ ██    ██ ██ ██  ██ █████"
-			+"\n██   ██ ██    ██ ██  ██ ██ ██ \n █████   ██████  ██   ████ ███████   ```- Identifier number: "+number +"\n-"+ version,
+			value: "-Game Name set. \n-Functions ready. \n-Conection to "+owner+" found.\n-Personality Installed \n-"+"Identifier number: "+number +"\n-"+ version
 		}],
 		footer: {
 			text: " - Developed by "+co+" inc."
@@ -96,7 +134,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
 			fields: [{
 				name: name + " " + version,
-				value: "Database: Connected \nServers: Running\nPersonality: Online\n"+ name +": Ready!"+"\nIdentifier number: "+ number
+				value: "Database: Connected \nServers: Running\nPersonality: Online\n"+ name +": Ready!"+"\nIdentifier number: "+ number +"\n-Hosted at "+ host
 
 			}],
 			footer: {
@@ -135,7 +173,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
 			fields: [{
 				name: "Good Morning!",
-				value: "-Game Name set. \n-Functions ready. \n-Conection to "+owner+" found.\n-Personality Installed \n-"+"Identifier number: "+number +"\n-"+ version
+				value: "-Game Name set. \n-Functions ready. \n-Conection to "+owner+" found.\n-Personality Installed \n-"+"Identifier number: "+number +"\n-"+ version +"\n-Hosted at "+ host
 
 			}],
 			footer: {
@@ -220,29 +258,8 @@ e.message.author.openDM().then(function(dm) {
                           })
 });
 
-
-		//open notes
-	} else if (e.message.content.toLowerCase().startsWith(wake + " check note")) {
-
-		e.message.channel.sendMessage("", false, {
-			color: 0x30bdff,
-			author: {
-
-				name: "Looking Up notes..."
-			},
-
-			fields: [{
-				name: "Please Wait",
-				value: "It will take a few moments."
-			}],
-			footer: {
-				text: " - I'm looking it up for you, "+ nick
-			}
-		});
-
-
 		//help menu
-	} else if (e.message.content.includes(wake + " help")) {
+	} else if (e.message.content.toLowerCase().includes(wake + " help")) {
 		e.message.channel.sendMessage("", false, {
 			color: 0x30bdff,
 			author: {
@@ -262,8 +279,8 @@ e.message.author.openDM().then(function(dm) {
 			}
 		});
 
-//BETA COMMANDS
-} else if (e.message.content.toLowerCase().includes(wake + " test")) {
+//Info
+} else if (e.message.content.toLowerCase().includes(wake + " info")) {
 
 e.message.channel.sendMessage("", false, {
 	color: 0x30bdff,
@@ -273,13 +290,24 @@ e.message.channel.sendMessage("", false, {
 	},
 
 	fields: [{
-		name: "They are online!",
-		value: number
+		name: "OK, lets see...",
+		value: "My Identification Number is "+number+"\nMy Version is "+ version+"\nAnd I am hosted at "+ host
 	}],
 	footer: {
-		text: " - I found them, "+ nick
+		text: "There you Go!"
 	}
 });
+} else if (e.message.content.toLowerCase().includes(wake + " server")) {
+var list = "**Server List:** \r\n";
+var numb = 1;
+console.log("Recieved Servers command \r\n");
+client.Guilds.map((self) => {
+	list += numb + ") " + self.name + "\r\n";
+	numb = numb+1;
+
+});
+	e.message.channel.sendMessage(list);
+
 
 
 		//ADMIN COMMANDS
@@ -486,42 +514,8 @@ footer: {
 }
 
 
-	} else {}
-setInterval(function(){
-  console.log(client.User.username + " is now doing a refresh");
-	client.Users.get(ownerid).openDM().then(function(dm) {
-	dm.sendMessage("", false, {
-		color: 0x30bdff,
-		author: {
-
-			name: ""
-		},
-
-		fields: [{
-			name: "June is now doing a refresh",
-  value:"Please wait..."
-		}],
-		footer: {
-			text: " - Developed by "+co+" inc."
-		}
-
-	});
-});
-      setTimeout(function() {
-
-        client.disconnect({
-          token: token
-        });
-
-      }, 100);
-      setTimeout(function() {
-        client.connect({
-          token: token
-        });
 
 
-   }, 500);
- }, 51840000);
+}else{}
 
-});
-}
+})
