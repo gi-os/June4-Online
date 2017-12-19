@@ -8,7 +8,7 @@ var client = new Discordie({
 });
 
 //version
-var version = "v1.6.1.3"; //version of june
+var version = "v1.6.1.3 //Always On Edition"; //version of june
 var host = "Heroku Servers"
 //Other important things
 var test = "FALSE"; //Is this bot avaliable for public use?
