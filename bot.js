@@ -13,7 +13,7 @@ var host = "Gi-OS Servers"
 //Other important things
 var test = "FALSE"; //Is this bot avaliable for public use?
 var number = randomIntFromInterval(1,100);// do not edit please
-var token = "Mjg2Mjg4MjE0OTI5NTcxODQw.C9bF8A.OiAO_N1Gm8KIBrOQtszwa9jBZfE"//Put your token here
+var token = "Mjg2Mjg4MjE0OTI5NTcxODQw.DRsEpg.JGjrccDYHG7a5gEYF-NKPW1qOA0"//Put your token here
 //users name
 var owner = "Giovanni Lupo"; //Your full name
 var ownerwake = "gio" //Your Nick Name Lowercase
