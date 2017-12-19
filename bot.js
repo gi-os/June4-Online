@@ -3,7 +3,7 @@ var Discordie = require("discordie");
 var Events = Discordie.Events;
 var client = new Discordie();
 client.connect({
-	token: BOT_TOKEN;
+	token: BOT_TOKEN
 });
 //version
 var version = "v1.4.25";
