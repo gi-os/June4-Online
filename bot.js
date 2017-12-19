@@ -164,7 +164,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
 		//Boot
 	} else if (e.message.content.toLowerCase() == wake + " boot") {
-		e.message.channel.sendMessage("", false, {
+		e.message.channel.sendMessage("testboozled", false, {
 			color: 0x8ff442,
 			author: {
 
