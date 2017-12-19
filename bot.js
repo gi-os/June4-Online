@@ -146,7 +146,7 @@ return new Promise(function (resolve, reject) {
 
 		//about
 	} else if (e.message.content.toLowerCase().startsWith(wake + " about")) {
-		e.message.channel.sendMessage({embed: {
+		e.message.channel.send({embed: {
 			color: 0x30bdff,
 			author: {
 
