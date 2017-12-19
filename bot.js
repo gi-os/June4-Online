@@ -36,7 +36,7 @@ client.connect({
 	token: token
 
 });
-getData().then(msg => message.channel.send(msg)).catch(err=>console.log(err))
+
 client.Dispatcher.on(Events.GATEWAY_READY, e => {
 
 	//terminal text
@@ -84,7 +84,7 @@ client.Dispatcher.on(Events.GATEWAY_READY, e => {
 }, 4000);
 }, 00);
 client.Users.get(ownerid).openDM().then(function(dm) {
-	dm.sendMessage("", false, {
+	dm.sendMessage(" ", false, {
 		color: 0x30bdff,
 		author: {
 
