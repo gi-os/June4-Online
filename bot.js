@@ -9,7 +9,7 @@ var client = new Discordie({
 
 //version
 var version = "v1.6.1.3"; //version of june
-var host = "Gi-OS Servers"
+var host = "Heroku Servers"
 //Other important things
 var test = "FALSE"; //Is this bot avaliable for public use?
 var number = randomIntFromInterval(1,100);// do not edit please
