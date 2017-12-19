@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "discordie": "^0.8.0",
-     "json" : "^4.0"
+     "jquery" : "^4.0"
 }
 }
