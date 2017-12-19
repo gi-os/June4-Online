@@ -2,10 +2,7 @@
 var Discordie = require("discordie");
 var Events = Discordie.Events;
 var client = new Discordie();
-client.connect({
-	token: process.env.BOT_TOKEN
 
-});
 //version
 var version = "v1.4.25";
 //users name
@@ -21,7 +18,7 @@ var nick = "June";
 var name = "June4";
 //other vars are somewhere else in the code (sorry! it only works there!)
 client.connect({
-	token: "Mjg2Mjg4MjE0OTI5NTcxODQw.C5eiPg.-Q2fmuIV_34LLCt87KeMFI8uraQ"
+	token: process.env.BOT_TOKEN
 });
 
 client.Dispatcher.on(Events.GATEWAY_READY, e => {
