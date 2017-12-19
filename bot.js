@@ -115,7 +115,9 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 		//Wake
 	} else if (e.message.content.toLowerCase() == wake + " wake") {
 		e.message.channel.sendMessage("I'm awake!");
-
+return new Promise(function (resolve, reject) {
+      message.channel.send( getData('Melbourne') ) ;
+  });
 		//thanks
 	} else if (e.message.content.toLowerCase().includes("thank")) {
 		if (e.message.content.toLowerCase().includes(wake + "")) {
@@ -144,7 +146,7 @@ client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
 
 		//about
 	} else if (e.message.content.toLowerCase().startsWith(wake + " about")) {
-		e.message.channel.sendMessage("", false, {
+		e.message.channel.sendMessage("testboozled", false, {
 			color: 0x30bdff,
 			author: {
 
