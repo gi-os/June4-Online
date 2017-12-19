@@ -146,7 +146,7 @@ return new Promise(function (resolve, reject) {
 
 		//about
 	} else if (e.message.content.toLowerCase().startsWith(wake + " about")) {
-		e.message.channel.sendMessage("testboozled", false, {
+		e.message.channel.sendMessage({embed: {
 			color: 0x30bdff,
 			author: {
 
@@ -161,7 +161,7 @@ return new Promise(function (resolve, reject) {
 			footer: {
 				text: "Developed by "+co+" inc "
 			}
-		});
+		}});
 
 
 		//Boot
