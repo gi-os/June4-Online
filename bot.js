@@ -1,4 +1,3 @@
-
 var Discordie = require("discordie");
 var Events = Discordie.Events;
 var client = new Discordie();
@@ -18,7 +17,7 @@ var nick = "June";
 var name = "June4";
 //other vars are somewhere else in the code (sorry! it only works there!)
 client.connect({
-	token: process.env.BOT_TOKEN
+	token: "Mjg2Mjg4MjE0OTI5NTcxODQw.C5eiPg.-Q2fmuIV_34LLCt87KeMFI8uraQ"
 });
 
 client.Dispatcher.on(Events.GATEWAY_READY, e => {
