@@ -84,7 +84,20 @@ client.Dispatcher.on(Events.GATEWAY_READY, e => {
 }, 4000);
 }, 00);
 client.Users.get(ownerid).openDM().then(function(dm) {
-	
+	```dm.sendMessage(" ", false, {
+		color: 0x30bdff,
+		author: {
+			name: ""
+		},
+		fields: [{
+			name: "Good morning "+ownernick+", "+name+" is now online!",
+			value: "-Game Name set. \n-Functions ready. \n-Conection to "+owner+" found.\n-Personality Installed \n-"+"Identifier number: "+number +"\n-"+ version
+		}],
+		footer: {
+			text: " - Developed by "+co+" inc."
+		}
+	});```
+});
 	//current game running
 	client.User.setGame("Ask me for Help!");
 });
